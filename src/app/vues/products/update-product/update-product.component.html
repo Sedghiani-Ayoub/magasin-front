@@ -1,0 +1,41 @@
+<!--<p>update-product works!</p>
+{{id}} -->
+<!--<p>create-product works!</p>
+
+<input type="text" id = "message" name="message"[(ngModel)]="message">
+<br>
+{{message}};
+<div align="center">
+    <br>
+    <h2>Product Form</h2>
+    <br>
+</div>
+-->
+<h1>Product Form</h1>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.name" placeholder="Product name">
+    </div>
+
+      <div class="form-group">
+        <label for="name">Category</label>
+       <select class="form-control" id="category" [(ngModel)]="product.category" name="category">
+
+        <option value="cosmetique">cosmetique</option>
+        <option value="alimentaire">alimentaire</option>
+        <option value="informatique">informatique</option>
+       </select>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" id="price" name="price" [(ngModel)]="product.price" placeholder="Product price">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Quantity</label>
+        <input type="text" class="form-control" id="quantity" name="quantity" [(ngModel)]="product.quantity" placeholder="Product quantity">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
